@@ -1,4 +1,6 @@
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Maximize2, Minimize2 } from "lucide-react";
 import logoSysde from "@/assets/logo_sysde.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -9,6 +11,17 @@ interface HeaderProps {
 
 export const Header = ({ showLogo = true }: HeaderProps) => {
   const { t } = useLanguage();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = useCallback(() => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  }, []);
 
   if (!showLogo) return null;
 
@@ -29,7 +42,16 @@ export const Header = ({ showLogo = true }: HeaderProps) => {
             <p className="text-xs text-muted-foreground">{t("header.subtitle")}</p>
           </div>
         </div>
-        <LanguageSwitcher />
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            onClick={toggleFullscreen}
+            className="nav-control w-10 h-10"
+            aria-label={isFullscreen ? "Salir de pantalla completa" : "Pantalla completa"}
+          >
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+          </button>
+        </div>
       </div>
     </motion.header>
   );

@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Home, Maximize2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home } from "lucide-react";
 
 interface NavigationControlsProps {
   onPrev: () => void;
   onNext: () => void;
   onHome: () => void;
-  onFullscreen: () => void;
   canGoPrev: boolean;
   canGoNext: boolean;
 }
@@ -14,7 +13,6 @@ export const NavigationControls = ({
   onPrev,
   onNext,
   onHome,
-  onFullscreen,
   canGoPrev,
   canGoNext,
 }: NavigationControlsProps) => {
@@ -61,13 +59,6 @@ export const NavigationControls = ({
           aria-label="Ir al inicio"
         >
           <Home className="w-5 h-5" />
-        </button>
-        <button
-          className="nav-control"
-          onClick={onFullscreen}
-          aria-label="Pantalla completa"
-        >
-          <Maximize2 className="w-5 h-5" />
         </button>
       </motion.div>
     </>

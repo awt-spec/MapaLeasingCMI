@@ -1,13 +1,10 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Header } from "@/components/presentation/Header";
 import { BackgroundDecorations } from "@/components/presentation/BackgroundDecorations";
 import { NavigationControls } from "@/components/presentation/NavigationControls";
 import { Slide } from "@/components/presentation/Slide";
-import { GateForm } from "@/components/presentation/GateForm";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
 
 // Import all slide components
 import { SlideIntro } from "@/components/presentation/slides/SlideIntro";
@@ -20,7 +17,6 @@ import { SlideAdminActivos } from "@/components/presentation/slides/SlideAdminAc
 import { SlideReportes } from "@/components/presentation/slides/SlideReportes";
 import { SlideClosing } from "@/components/presentation/slides/SlideClosing";
 
-// Slide configuration with components and label keys
 const slideConfig = [
   { id: 0, component: SlideIntro, labelKey: "slide.inicio" },
   { id: 1, component: SlideFlujoOperativo, labelKey: "slide.flujo" },
@@ -33,102 +29,17 @@ const slideConfig = [
   { id: 8, component: SlideClosing, labelKey: "slide.cierre" },
 ];
 
-// Mapping: slide index → gateId (which gate form to show before entering that slide)
-const SLIDE_TO_GATE: Record<number, number> = {
-  1: 0,  // Intro → Contacto (empresa, email, WhatsApp)
-  2: 1,  // Reglas de Negocio → "¿Tienen operación activa de leasing?"
-  4: 3,  // Procesos Comerciales → "¿Tienen sistema para administrar leasing?"
-  5: 4,  // Formalización → "Usuarios que operan leasing"
-  6: 5,  // Admin Activos → "¿Contratos activos?"
-};
-
 const Index = () => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [completedGates, setCompletedGates] = useState<Set<number>>(new Set());
-  const [activeGate, setActiveGate] = useState<number | null>(null);
-  const [pendingSlide, setPendingSlide] = useState<number | null>(null);
-  const [hasActiveOperation, setHasActiveOperation] = useState<boolean | null>(null);
-  const allAnswers = useRef<Record<string, string>>({});
   const totalSlides = slideConfig.length;
-
-  const contactInfo = useRef<{ company: string; email: string; whatsapp: string }>({ company: '', email: '', whatsapp: '' });
-
-  const sendSurvey = useCallback(async (answers: Record<string, string>, isSummary = false) => {
-    try {
-      const { data, error } = await supabase.functions.invoke('send-survey', {
-        body: { answers, contact: contactInfo.current, isSummary },
-      });
-      if (error) throw error;
-      console.log('Survey sent successfully', data);
-    } catch (err) {
-      console.error('Error sending survey:', err);
-    }
-  }, []);
 
   const tryNavigate = useCallback((targetIndex: number) => {
     if (targetIndex < 0 || targetIndex >= totalSlides) return;
-
-    // If no active operation, skip gate 3 (system question) automatically
-    const gateId = SLIDE_TO_GATE[targetIndex];
-    if (gateId !== undefined && !completedGates.has(targetIndex)) {
-      if (gateId === 3 && hasActiveOperation === false) {
-        // Auto-complete: no active operation means no system either
-        setCompletedGates(prev => new Set(prev).add(targetIndex));
-        setDirection(targetIndex > currentSlide ? 1 : -1);
-        setCurrentSlide(targetIndex);
-        return;
-      }
-      setActiveGate(gateId);
-      setPendingSlide(targetIndex);
-      return;
-    }
-
     setDirection(targetIndex > currentSlide ? 1 : -1);
     setCurrentSlide(targetIndex);
-  }, [totalSlides, currentSlide, completedGates, hasActiveOperation]);
-
-  const gateLabels: Record<number, string> = {
-    0: "Datos de contacto",
-    1: "Operación activa de leasing",
-    3: "Sistema para administrar leasing",
-    4: "Usuarios que operan leasing",
-    5: "Contratos activos de leasing",
-  };
-
-  const handleGateComplete = useCallback((answers: Record<string, string>) => {
-    if (pendingSlide !== null) {
-      // Contact gate
-      if (activeGate === 0) {
-        contactInfo.current = { company: answers.main, email: answers.email || '', whatsapp: answers.whatsapp || '' };
-        allAnswers.current["Empresa"] = answers.main;
-        allAnswers.current["Email"] = answers.email || '';
-        allAnswers.current["WhatsApp"] = answers.whatsapp || '';
-        sendSurvey({ "Empresa": answers.main, "Email": answers.email || '', "WhatsApp": answers.whatsapp || '' });
-      } else {
-        if (activeGate === 1) {
-          setHasActiveOperation(answers.main === "yes");
-        }
-        const label = gateLabels[activeGate!] || `Gate ${activeGate}`;
-        const value = answers.sub ? `${answers.main} → ${answers.sub}` : answers.main;
-        allAnswers.current[label] = value;
-        // Send individual answer
-        sendSurvey({ [label]: value });
-      }
-
-      setCompletedGates(prev => new Set(prev).add(pendingSlide));
-      setDirection(pendingSlide > currentSlide ? 1 : -1);
-      setCurrentSlide(pendingSlide);
-
-      // Send summary after last gate (gate 5)
-      if (activeGate === 5) {
-        sendSurvey(allAnswers.current, true);
-      }
-    }
-    setActiveGate(null);
-    setPendingSlide(null);
-  }, [pendingSlide, currentSlide, activeGate, sendSurvey]);
+  }, [totalSlides, currentSlide]);
 
   const goNext = useCallback(() => {
     tryNavigate(currentSlide + 1);
@@ -146,18 +57,9 @@ const Index = () => {
     setCurrentSlide(0);
   }, []);
 
-  const toggleFullscreen = useCallback(() => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  }, []);
-
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (activeGate !== null) return; // Block keyboard nav while gate is open
       switch (e.key) {
         case "ArrowRight":
         case "ArrowDown":
@@ -178,17 +80,12 @@ const Index = () => {
           e.preventDefault();
           tryNavigate(totalSlides - 1);
           break;
-        case "f":
-        case "F":
-          e.preventDefault();
-          toggleFullscreen();
-          break;
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [goNext, goPrev, goHome, tryNavigate, totalSlides, toggleFullscreen, activeGate]);
+  }, [goNext, goPrev, goHome, tryNavigate, totalSlides]);
 
   // Touch/swipe navigation
   useEffect(() => {
@@ -248,20 +145,9 @@ const Index = () => {
         onPrev={goPrev}
         onNext={goNext}
         onHome={goHome}
-        onFullscreen={toggleFullscreen}
         canGoPrev={currentSlide > 0}
         canGoNext={currentSlide < totalSlides - 1}
       />
-
-      {/* Gate Form Modal */}
-      {activeGate !== null && (
-        <GateForm
-          open={true}
-          onComplete={handleGateComplete}
-          gateId={activeGate}
-          hasActiveOperation={hasActiveOperation ?? true}
-        />
-      )}
 
       <main className="relative z-10 perspective-container" style={{ perspective: "1200px" }}>
         <AnimatePresence mode="wait" custom={direction}>
@@ -286,7 +172,7 @@ const Index = () => {
         </AnimatePresence>
       </main>
 
-      {/* Enhanced Progress Bar with labels */}
+      {/* Progress Bar */}
       <motion.div
         className="fixed bottom-0 left-0 right-0 z-50"
         initial={{ y: 100 }}

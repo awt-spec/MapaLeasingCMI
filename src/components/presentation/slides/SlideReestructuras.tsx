@@ -18,7 +18,7 @@ export const SlideReestructuras = () => {
       <SubZoomContainer delay={0.3} direction="left">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
           {[
-            { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-red-500/20", textColor: "text-red-600" },
+            { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-orange-500/20", textColor: "text-orange-600" },
             { icon: Calculator, label: "Proyección deuda", color: "bg-amber-500/20", textColor: "text-amber-600" },
             { icon: FileSignature, label: "Nueva línea", color: "bg-blue-500/20", textColor: "text-blue-600" },
             { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-emerald-500/20", textColor: "text-emerald-600" },

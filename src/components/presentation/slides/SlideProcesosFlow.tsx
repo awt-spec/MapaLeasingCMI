@@ -125,7 +125,7 @@ const OriginacionView = () => (
           <div className="ml-auto flex gap-1.5">
             <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center"><Plus className="w-3 h-3 text-emerald-500" /></div>
             <div className="w-6 h-6 rounded-md bg-blue-500/10 flex items-center justify-center"><Pencil className="w-3 h-3 text-blue-500" /></div>
-            <div className="w-6 h-6 rounded-md bg-red-500/10 flex items-center justify-center"><ClipboardList className="w-3 h-3 text-red-500" /></div>
+            <div className="w-6 h-6 rounded-md bg-orange-500/10 flex items-center justify-center"><ClipboardList className="w-3 h-3 text-orange-500" /></div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-2">

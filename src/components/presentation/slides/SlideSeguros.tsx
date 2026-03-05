@@ -32,7 +32,7 @@ export const SlideSeguros = () => {
             >
               <motion.div
                 className="w-16 h-16 rounded-xl bg-primary/10 border border-primary/30 flex flex-col items-center justify-center"
-                whileHover={{ scale: 1.1, borderColor: "hsl(358, 78%, 45%)" }}
+                whileHover={{ scale: 1.1, borderColor: "hsl(30, 91%, 54%)" }}
               >
                 <step.icon className="w-6 h-6 text-primary" />
               </motion.div>

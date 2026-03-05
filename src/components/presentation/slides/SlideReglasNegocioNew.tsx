@@ -12,11 +12,11 @@ const categories = [
   {
     id: "config",
     icon: Settings,
-    iconBg: "bg-red-100 dark:bg-red-900/30",
-    iconColor: "text-red-600 dark:text-red-400",
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
     title: "Configuración General",
     description: "Parámetros base del sistema",
-    buttonColor: "bg-gradient-to-r from-red-500 to-red-600",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-amber-500",
     itemCount: 8,
     tags: [
       { icon: Percent, label: "Tasa de Interés" },
@@ -90,7 +90,7 @@ const categories = [
 ];
 
 const legendItems = [
-  { color: "bg-red-500", label: "Config. General" },
+  { color: "bg-orange-500", label: "Config. General" },
   { color: "bg-emerald-500", label: "Líneas de Crédito" },
   { color: "bg-amber-500", label: "Pagadores" },
 ];

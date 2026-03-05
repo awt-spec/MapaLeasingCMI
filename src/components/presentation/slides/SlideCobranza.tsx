@@ -100,7 +100,7 @@ export const SlideCobranza = () => {
           <h3 className="font-bold text-lg mb-4 text-center">Control de Cartera</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: AlertCircle, label: "Avisos de Mora", color: "text-red-500" },
+              { icon: AlertCircle, label: "Avisos de Mora", color: "text-orange-500" },
               { icon: BarChart3, label: "Cartera Vencida", color: "text-amber-500" },
               { icon: FileCheck, label: "Estados de Cuenta", color: "text-blue-500" },
               { icon: CreditCard, label: "Cierre Diario", color: "text-emerald-500" },

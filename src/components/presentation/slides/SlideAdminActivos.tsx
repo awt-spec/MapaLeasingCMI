@@ -78,6 +78,22 @@ const topProcesses = [
       { icon: CheckCircle2, label: "Transferir" },
     ],
   },
+  {
+    id: "reestructuras",
+    icon: RefreshCw,
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
+    title: "Reestructuras",
+    description: "Ejecución y renegociación",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-orange-600",
+    itemCount: 4,
+    tag: "Proceso",
+    tags: [
+      { icon: AlertTriangle, label: "Atrasos" },
+      { icon: Calculator, label: "Proyección" },
+      { icon: FileSignature, label: "Nueva línea" },
+    ],
+  },
 ];
 
 const legendItems = [
@@ -85,6 +101,7 @@ const legendItems = [
   { color: "bg-orange-500", label: "Cobranza" },
   { color: "bg-gray-500", label: "Seguros" },
   { color: "bg-orange-400", label: "Compra" },
+  { color: "bg-orange-500", label: "Reestructuras" },
 ];
 
 // ==================== ACTIVOS: Sub-navigation ====================
@@ -119,22 +136,6 @@ const activosSubProcesses = [
       { icon: Car, label: "Vehículos" },
       { icon: Factory, label: "Maquinaria" },
       { icon: Server, label: "TI" },
-    ],
-  },
-  {
-    id: "reestructura-config",
-    icon: RefreshCw,
-    iconBg: "bg-orange-50 dark:bg-orange-900/20",
-    iconColor: "text-orange-500 dark:text-orange-400",
-    title: "Reestructura",
-    description: "Condiciones",
-    buttonColor: "bg-gradient-to-r from-orange-400 to-orange-500",
-    itemCount: 6,
-    tag: "Config",
-    tags: [
-      { icon: Clock, label: "Plazos" },
-      { icon: Banknote, label: "Montos" },
-      { icon: Receipt, label: "Adeudos" },
     ],
   },
   {
@@ -326,7 +327,7 @@ const ActivosView = () => {
               <SubzoomHeader icon={activeSub.icon} iconBg={activeSub.iconBg} iconColor={activeSub.iconColor} title={activeSub.title} description={activeSub.description} tag={activeSub.tag} onBack={() => setSubSelected(null)} />
               {subSelected === "contratos" && <ContratosView />}
               {subSelected === "inventario" && <InventarioView />}
-              {subSelected === "reestructura-config" && <ReestructuraConfigView />}
+              
               {subSelected === "pago-proveedores" && <PagoProveedoresView />}
             </>
           )}
@@ -597,7 +598,7 @@ export const SlideAdminActivos = () => {
                 {selectedProcess === "cobranza" && <CobranzaView />}
                 {selectedProcess === "seguros" && <SegurosView />}
                 {selectedProcess === "compra" && <CompraView />}
-                
+                {selectedProcess === "reestructuras" && <ReestructurasView />}
               </>
             )}
           </motion.div>

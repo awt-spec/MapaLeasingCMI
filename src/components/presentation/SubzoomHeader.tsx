@@ -65,7 +65,7 @@ export const SubzoomHeader = ({
 
       {/* Main header card */}
       <motion.div
-        className={`w-full p-6 rounded-2xl bg-gradient-to-r ${iconBg.includes("blue") ? "from-blue-500 to-blue-600" : iconBg.includes("emerald") || iconBg.includes("green") ? "from-emerald-500 to-emerald-600" : iconBg.includes("amber") || iconBg.includes("orange") ? "from-amber-500 to-orange-500" : iconBg.includes("red") ? "from-red-500 to-red-600" : "from-primary to-primary/80"} text-white shadow-xl`}
+        className={`w-full p-6 rounded-2xl bg-gradient-to-r ${iconBg.includes("blue") ? "from-blue-500 to-blue-600" : iconBg.includes("emerald") || iconBg.includes("green") ? "from-emerald-500 to-emerald-600" : iconBg.includes("amber") || iconBg.includes("orange") ? "from-amber-500 to-orange-500" : iconBg.includes("violet") || iconBg.includes("purple") ? "from-violet-500 to-purple-600" : "from-primary to-primary/80"} text-white shadow-xl`}
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.15 }}

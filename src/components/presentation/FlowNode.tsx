@@ -19,10 +19,10 @@ const variantStyles = {
     iconColor: "text-amber-700 dark:text-amber-300",
   },
   secondary: {
-    bg: "bg-red-100 dark:bg-red-900/30",
-    border: "border-red-300 dark:border-red-700",
-    iconBg: "bg-red-200 dark:bg-red-800",
-    iconColor: "text-red-700 dark:text-red-300",
+    bg: "bg-blue-100 dark:bg-blue-900/30",
+    border: "border-blue-300 dark:border-blue-700",
+    iconBg: "bg-blue-200 dark:bg-blue-800",
+    iconColor: "text-blue-700 dark:text-blue-300",
   },
   accent: {
     bg: "bg-orange-100 dark:bg-orange-900/30",

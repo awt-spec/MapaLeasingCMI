@@ -153,32 +153,32 @@
   }
 
   .flow-box-success {
-    @apply border-emerald-500/50 bg-emerald-50/50;
+    @apply border-orange-500/50 bg-orange-50/50;
   }
 
   .flow-box-danger {
-    @apply border-red-500/50 bg-red-50/50;
+    @apply border-gray-500/50 bg-gray-50/50;
   }
 
   .flow-box-warning {
-    @apply border-amber-500/50 bg-amber-50/50;
+    @apply border-orange-400/50 bg-orange-50/50;
   }
 
   .flow-box-decision {
-    @apply border-blue-500/50 bg-blue-50/50;
+    @apply border-gray-400/50 bg-gray-50/50;
   }
 
   .flow-box-info {
-    @apply border-sky-500/50 bg-sky-50/50;
+    @apply border-orange-300/50 bg-orange-50/50;
   }
 
   .flow-box-special {
-    @apply border-purple-500/50 bg-purple-50/50;
+    @apply border-gray-600/50 bg-gray-50/50;
   }
 
   /* Decision Diamond */
   .decision-diamond {
-    @apply w-16 h-16 bg-blue-500/20 border-2 border-blue-500 rotate-45 flex items-center justify-center;
+    @apply w-16 h-16 bg-gray-500/20 border-2 border-gray-500 rotate-45 flex items-center justify-center;
   }
 
   .decision-diamond-content {

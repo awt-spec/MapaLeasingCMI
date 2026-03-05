@@ -17,11 +17,11 @@ const topProcesses = [
   {
     id: "activos",
     icon: Package,
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
+    iconBg: "bg-gray-100 dark:bg-gray-800/30",
+    iconColor: "text-gray-600 dark:text-gray-400",
     title: "Activos",
     description: "Contratos, inventario, pagos y más",
-    buttonColor: "bg-gradient-to-r from-blue-500 to-blue-600",
+    buttonColor: "bg-gradient-to-r from-gray-500 to-gray-600",
     itemCount: 5,
     tag: "Core",
     tags: [
@@ -37,7 +37,7 @@ const topProcesses = [
     iconColor: "text-orange-600 dark:text-orange-400",
     title: "Cobranza",
     description: "Workflow No-Code personalizable",
-    buttonColor: "bg-gradient-to-r from-orange-500 to-amber-500",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-orange-600",
     itemCount: 7,
     tag: "No-Code",
     tags: [
@@ -49,11 +49,11 @@ const topProcesses = [
   {
     id: "seguros",
     icon: Shield,
-    iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
-    iconColor: "text-emerald-600 dark:text-emerald-400",
+    iconBg: "bg-gray-100 dark:bg-gray-800/30",
+    iconColor: "text-gray-600 dark:text-gray-400",
     title: "Seguros",
     description: "Gestión de pólizas",
-    buttonColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
+    buttonColor: "bg-gradient-to-r from-gray-500 to-gray-600",
     itemCount: 4,
     tag: "Pólizas",
     tags: [
@@ -65,11 +65,11 @@ const topProcesses = [
   {
     id: "compra",
     icon: ShoppingBag,
-    iconBg: "bg-violet-100 dark:bg-violet-900/30",
-    iconColor: "text-violet-600 dark:text-violet-400",
+    iconBg: "bg-orange-50 dark:bg-orange-900/20",
+    iconColor: "text-orange-500 dark:text-orange-400",
     title: "Opción de Compra",
     description: "Arrendamiento financiero",
-    buttonColor: "bg-gradient-to-r from-violet-500 to-purple-600",
+    buttonColor: "bg-gradient-to-r from-orange-400 to-orange-500",
     itemCount: 4,
     tag: "Flujo",
     tags: [
@@ -81,11 +81,11 @@ const topProcesses = [
   {
     id: "reestructuras",
     icon: RefreshCw,
-    iconBg: "bg-amber-100 dark:bg-amber-900/30",
-    iconColor: "text-amber-600 dark:text-amber-400",
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
     title: "Reestructuras",
     description: "Ejecución y renegociación",
-    buttonColor: "bg-gradient-to-r from-amber-500 to-orange-500",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-orange-600",
     itemCount: 4,
     tag: "Proceso",
     tags: [
@@ -97,11 +97,11 @@ const topProcesses = [
 ];
 
 const legendItems = [
-  { color: "bg-blue-500", label: "Activos" },
+  { color: "bg-gray-500", label: "Activos" },
   { color: "bg-orange-500", label: "Cobranza" },
-  { color: "bg-emerald-500", label: "Seguros" },
-  { color: "bg-violet-500", label: "Compra" },
-  { color: "bg-amber-500", label: "Reestructuras" },
+  { color: "bg-gray-500", label: "Seguros" },
+  { color: "bg-orange-400", label: "Compra" },
+  { color: "bg-orange-500", label: "Reestructuras" },
 ];
 
 // ==================== ACTIVOS: Sub-navigation ====================
@@ -109,11 +109,11 @@ const activosSubProcesses = [
   {
     id: "contratos",
     icon: FileText,
-    iconBg: "bg-blue-100 dark:bg-blue-900/30",
-    iconColor: "text-blue-600 dark:text-blue-400",
+    iconBg: "bg-gray-100 dark:bg-gray-800/30",
+    iconColor: "text-gray-600 dark:text-gray-400",
     title: "Contratos",
     description: "Ciclo contractual",
-    buttonColor: "bg-gradient-to-r from-blue-500 to-blue-600",
+    buttonColor: "bg-gradient-to-r from-gray-500 to-gray-600",
     itemCount: 9,
     tag: "Core",
     tags: [
@@ -125,11 +125,11 @@ const activosSubProcesses = [
   {
     id: "inventario",
     icon: Package,
-    iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
-    iconColor: "text-emerald-600 dark:text-emerald-400",
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
     title: "Inventario",
     description: "Multi-categoría",
-    buttonColor: "bg-gradient-to-r from-emerald-500 to-emerald-600",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-orange-600",
     itemCount: 10,
     tag: "Multi-Activo",
     tags: [
@@ -141,11 +141,11 @@ const activosSubProcesses = [
   {
     id: "reestructura-config",
     icon: RefreshCw,
-    iconBg: "bg-amber-100 dark:bg-amber-900/30",
-    iconColor: "text-amber-600 dark:text-amber-400",
+    iconBg: "bg-orange-50 dark:bg-orange-900/20",
+    iconColor: "text-orange-500 dark:text-orange-400",
     title: "Reestructura",
     description: "Condiciones",
-    buttonColor: "bg-gradient-to-r from-amber-500 to-orange-500",
+    buttonColor: "bg-gradient-to-r from-orange-400 to-orange-500",
     itemCount: 6,
     tag: "Config",
     tags: [
@@ -157,11 +157,11 @@ const activosSubProcesses = [
   {
     id: "pago-proveedores",
     icon: Landmark,
-    iconBg: "bg-violet-100 dark:bg-violet-900/30",
-    iconColor: "text-violet-600 dark:text-violet-400",
+    iconBg: "bg-gray-100 dark:bg-gray-800/30",
+    iconColor: "text-gray-600 dark:text-gray-400",
     title: "Pago Proveedores",
     description: "Desembolsos",
-    buttonColor: "bg-gradient-to-r from-violet-500 to-purple-600",
+    buttonColor: "bg-gradient-to-r from-gray-500 to-gray-600",
     itemCount: 5,
     tag: "Pagos",
     tags: [
@@ -174,13 +174,13 @@ const activosSubProcesses = [
 // ==================== CONTRATOS VIEW ====================
 const ContratosView = () => {
   const phases = [
-    { title: "Apertura", color: "from-blue-500 to-blue-600", items: [
+    { title: "Apertura", color: "from-orange-500 to-orange-600", items: [
       { icon: User, label: "Cliente / deudor" }, { icon: CreditCard, label: "Producto financiado" }, { icon: DollarSign, label: "Tipos de moneda" },
     ]},
-    { title: "Configuración", color: "from-blue-400 to-cyan-500", items: [
+    { title: "Configuración", color: "from-gray-500 to-gray-600", items: [
       { icon: Calendar, label: "Fecha apertura / vencimiento" }, { icon: Shield, label: "Garantías asociadas" }, { icon: Calculator, label: "Cálculo de la cuota" },
     ]},
-    { title: "Financiamiento", color: "from-cyan-500 to-teal-500", items: [
+    { title: "Financiamiento", color: "from-orange-400 to-orange-500", items: [
       { icon: Banknote, label: "Rentas en depósito" }, { icon: SlidersHorizontal, label: "Tasas y comisiones" }, { icon: FileText, label: "Documentación legal" },
     ]},
   ];
@@ -196,7 +196,7 @@ const ContratosView = () => {
             <div className="bg-card border border-t-0 border-border rounded-b-2xl p-4 space-y-2">
               {phase.items.map((item, ii) => (
                 <motion.div key={item.label} className="flex items-center gap-3 px-4 py-3 rounded-xl bg-muted/40 border border-border/50 hover:bg-muted/70 transition-colors" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 + pi * 0.2 + ii * 0.08 }} whileHover={{ x: 4 }}>
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center"><item.icon className="w-4 h-4 text-blue-500" /></div>
+                  <div className="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center"><item.icon className="w-4 h-4 text-orange-500" /></div>
                   <span className="text-sm font-semibold text-foreground">{item.label}</span>
                 </motion.div>
               ))}
@@ -211,16 +211,16 @@ const ContratosView = () => {
 
 // ==================== INVENTARIO VIEW ====================
 const assetCategories = [
-  { icon: Car, title: "Vehículos", items: ["Autos", "Pickups", "Vans", "Camiones", "Buses", "Motos", "Flotas"], color: "text-blue-500", bg: "bg-blue-500/10" },
-  { icon: Factory, title: "Maquinaria Industrial", items: ["CNC", "Prensas", "Compresores", "Calderas", "Montacargas", "Generadores"], color: "text-orange-500", bg: "bg-orange-500/10" },
-  { icon: HardHat, title: "Equipo de Construcción", items: ["Excavadoras", "Retroexcavadoras", "Grúas", "Mezcladoras", "Pavimentación"], color: "text-amber-600", bg: "bg-amber-500/10" },
-  { icon: Stethoscope, title: "Equipo Médico", items: ["Rayos X", "Resonancia", "Ultrasonidos", "Odontológicos", "Lab. clínico"], color: "text-emerald-500", bg: "bg-emerald-500/10" },
-  { icon: Server, title: "Tecnología / TI", items: ["Servidores", "Storage", "Redes", "Laptops corporativas", "IT Leasing"], color: "text-violet-500", bg: "bg-violet-500/10" },
-  { icon: ShoppingCart, title: "Equipamiento Comercial", items: ["Refrigeración", "Cocina industrial", "Hornos", "Mobiliario", "POS"], color: "text-pink-500", bg: "bg-pink-500/10" },
-  { icon: Sun, title: "Energía y Renovables", items: ["Paneles solares", "Inversores", "Baterías", "Plantas eléctricas"], color: "text-yellow-500", bg: "bg-yellow-500/10" },
-  { icon: Building, title: "Inmuebles", items: ["Bodegas", "Edificios", "Locales", "Oficinas", "Naves industriales"], color: "text-slate-500", bg: "bg-slate-500/10" },
-  { icon: Tractor, title: "Activos Agrícolas", items: ["Tractores", "Implementos", "Riego", "Ordeño"], color: "text-lime-600", bg: "bg-lime-500/10" },
-  { icon: Code, title: "Activos Intangibles", items: ["Software", "Licencias", "Derechos de uso", "Arrendamiento operativo"], color: "text-cyan-500", bg: "bg-cyan-500/10" },
+  { icon: Car, title: "Vehículos", items: ["Autos", "Pickups", "Vans", "Camiones", "Buses", "Motos", "Flotas"], color: "text-orange-500", bg: "bg-orange-500/10" },
+  { icon: Factory, title: "Maquinaria Industrial", items: ["CNC", "Prensas", "Compresores", "Calderas", "Montacargas", "Generadores"], color: "text-gray-600", bg: "bg-gray-500/10" },
+  { icon: HardHat, title: "Equipo de Construcción", items: ["Excavadoras", "Retroexcavadoras", "Grúas", "Mezcladoras", "Pavimentación"], color: "text-orange-600", bg: "bg-orange-500/10" },
+  { icon: Stethoscope, title: "Equipo Médico", items: ["Rayos X", "Resonancia", "Ultrasonidos", "Odontológicos", "Lab. clínico"], color: "text-gray-500", bg: "bg-gray-500/10" },
+  { icon: Server, title: "Tecnología / TI", items: ["Servidores", "Storage", "Redes", "Laptops corporativas", "IT Leasing"], color: "text-orange-500", bg: "bg-orange-500/10" },
+  { icon: ShoppingCart, title: "Equipamiento Comercial", items: ["Refrigeración", "Cocina industrial", "Hornos", "Mobiliario", "POS"], color: "text-gray-600", bg: "bg-gray-500/10" },
+  { icon: Sun, title: "Energía y Renovables", items: ["Paneles solares", "Inversores", "Baterías", "Plantas eléctricas"], color: "text-orange-500", bg: "bg-orange-500/10" },
+  { icon: Building, title: "Inmuebles", items: ["Bodegas", "Edificios", "Locales", "Oficinas", "Naves industriales"], color: "text-gray-500", bg: "bg-gray-500/10" },
+  { icon: Tractor, title: "Activos Agrícolas", items: ["Tractores", "Implementos", "Riego", "Ordeño"], color: "text-orange-600", bg: "bg-orange-500/10" },
+  { icon: Code, title: "Activos Intangibles", items: ["Software", "Licencias", "Derechos de uso", "Arrendamiento operativo"], color: "text-gray-600", bg: "bg-gray-500/10" },
 ];
 
 const InventarioView = () => (
@@ -265,8 +265,8 @@ const ReestructuraConfigView = () => {
       <StaggerContainer className="flex flex-col items-center gap-1" staggerDelay={0.08} initialDelay={0.3}>
         {steps.map((step, i) => (
           <StaggerItem key={step.label} className="flex flex-col items-center">
-            <motion.div className={`flex items-center gap-3 px-5 py-3 rounded-xl border shadow-sm w-full max-w-md ${step.highlight ? "bg-amber-500/10 border-amber-300/50 dark:border-amber-700/50" : "bg-card border-border"}`} whileHover={{ scale: 1.02, x: 4 }}>
-              <div className={`w-8 h-8 rounded-lg ${step.highlight ? "bg-amber-500/20" : "bg-muted"} flex items-center justify-center`}><step.icon className={`w-4 h-4 ${step.highlight ? "text-amber-600" : "text-muted-foreground"}`} /></div>
+            <motion.div className={`flex items-center gap-3 px-5 py-3 rounded-xl border shadow-sm w-full max-w-md ${step.highlight ? "bg-orange-500/10 border-orange-300/50 dark:border-orange-700/50" : "bg-card border-border"}`} whileHover={{ scale: 1.02, x: 4 }}>
+              <div className={`w-8 h-8 rounded-lg ${step.highlight ? "bg-orange-500/20" : "bg-muted"} flex items-center justify-center`}><step.icon className={`w-4 h-4 ${step.highlight ? "text-orange-600" : "text-muted-foreground"}`} /></div>
               <span className="text-sm font-semibold text-foreground">{step.label}</span>
             </motion.div>
             {i < steps.length - 1 && <ArrowDown className="w-3 h-3 text-muted-foreground my-0.5 opacity-40" />}
@@ -291,8 +291,8 @@ const PagoProveedoresView = () => {
       <StaggerContainer className="flex flex-col items-center gap-1" staggerDelay={0.08} initialDelay={0.3}>
         {steps.map((step, i) => (
           <StaggerItem key={step.label} className="flex flex-col items-center">
-            <motion.div className={`flex items-center gap-3 px-5 py-3 rounded-xl border shadow-sm w-full max-w-md ${step.highlight ? "bg-violet-500/10 border-violet-300/50 dark:border-violet-700/50" : "bg-card border-border"}`} whileHover={{ scale: 1.02, x: 4 }}>
-              <div className={`w-8 h-8 rounded-lg ${step.highlight ? "bg-violet-500/20" : "bg-muted"} flex items-center justify-center`}><step.icon className={`w-4 h-4 ${step.highlight ? "text-violet-600" : "text-muted-foreground"}`} /></div>
+            <motion.div className={`flex items-center gap-3 px-5 py-3 rounded-xl border shadow-sm w-full max-w-md ${step.highlight ? "bg-gray-500/10 border-gray-300/50 dark:border-gray-700/50" : "bg-card border-border"}`} whileHover={{ scale: 1.02, x: 4 }}>
+              <div className={`w-8 h-8 rounded-lg ${step.highlight ? "bg-gray-500/20" : "bg-muted"} flex items-center justify-center`}><step.icon className={`w-4 h-4 ${step.highlight ? "text-gray-600" : "text-muted-foreground"}`} /></div>
               <span className="text-sm font-semibold text-foreground">{step.label}</span>
             </motion.div>
             {i < steps.length - 1 && <ArrowDown className="w-3 h-3 text-muted-foreground my-0.5 opacity-40" />}
@@ -303,7 +303,7 @@ const PagoProveedoresView = () => {
   );
 };
 
-// ==================== ACTIVOS VIEW (sub-navigation) ====================
+// ==================== ACTIVOS VIEW ====================
 const ActivosView = () => {
   const [subSelected, setSubSelected] = useState<string | null>(null);
   const activeSub = activosSubProcesses.find(p => p.id === subSelected);
@@ -353,7 +353,7 @@ const ActivosView = () => {
   );
 };
 
-// ==================== COBRANZA VIEW (No-Code) ====================
+// ==================== COBRANZA VIEW ====================
 const CobranzaView = () => {
   const workflowSteps = [
     { icon: Calendar, label: "Generación de cuotas" }, { icon: Banknote, label: "Aplicación de pagos" },
@@ -367,7 +367,7 @@ const CobranzaView = () => {
         <div className="flex items-center gap-2 mb-4">
           <Receipt className="w-5 h-5 text-orange-500" />
           <span className="text-sm font-bold text-foreground">Flujo de Cobranza</span>
-          <motion.span className="ml-auto px-2.5 py-0.5 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-[10px] font-bold rounded-full" animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 2, repeat: Infinity }}>NO-CODE</motion.span>
+          <motion.span className="ml-auto px-2.5 py-0.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-[10px] font-bold rounded-full" animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 2, repeat: Infinity }}>NO-CODE</motion.span>
         </div>
         <StaggerContainer className="flex flex-col items-center gap-1" staggerDelay={0.08} initialDelay={0.3}>
           {workflowSteps.map((step, i) => (
@@ -394,9 +394,9 @@ const CobranzaView = () => {
           </div>
           <div className="grid grid-cols-3 gap-3">
             {[
-              { icon: Plus, label: "Agregar", desc: "Nuevos pasos y reglas", color: "text-emerald-500" },
-              { icon: Pencil, label: "Editar", desc: "Condiciones y plazos", color: "text-blue-500" },
-              { icon: Layers, label: "Organizar", desc: "Orden y prioridad", color: "text-amber-500" },
+              { icon: Plus, label: "Agregar", desc: "Nuevos pasos y reglas", color: "text-orange-500" },
+              { icon: Pencil, label: "Editar", desc: "Condiciones y plazos", color: "text-gray-500" },
+              { icon: Layers, label: "Organizar", desc: "Orden y prioridad", color: "text-orange-600" },
             ].map(item => (
               <motion.div key={item.label} className="p-3 rounded-xl bg-card border border-border text-center" whileHover={{ y: -2, scale: 1.02 }}>
                 <item.icon className={`w-5 h-5 ${item.color} mx-auto mb-1`} />
@@ -443,7 +443,7 @@ const SegurosView = () => (
           <p className="text-sm text-muted-foreground mb-4">Podemos asociar un cargo tipo seguro cuando ya está generado el contrato.</p>
           <StaggerContainer className="space-y-2" staggerDelay={0.1} initialDelay={0.9}>
             {["Asociar cargo tipo póliza", "Adjuntar documentos", "Programar periodicidad"].map((item) => (
-              <StaggerItem key={item}><motion.div className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg" whileHover={{ x: 4 }}><CheckCircle className="w-4 h-4 text-emerald-500" /><span>{item}</span></motion.div></StaggerItem>
+              <StaggerItem key={item}><motion.div className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg" whileHover={{ x: 4 }}><CheckCircle className="w-4 h-4 text-orange-500" /><span>{item}</span></motion.div></StaggerItem>
             ))}
           </StaggerContainer>
         </motion.div>
@@ -454,7 +454,7 @@ const SegurosView = () => (
           <p className="text-sm text-muted-foreground mb-4">Se posee un apartado para poder administrar las pólizas asociadas a los bienes.</p>
           <StaggerContainer className="space-y-2" staggerDelay={0.1} initialDelay={1.1}>
             {["# Póliza e inventario", "Tipo de póliza", "Notificaciones de vencimiento", "Reporte de control"].map((item) => (
-              <StaggerItem key={item}><motion.div className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg" whileHover={{ x: 4 }}><Shield className="w-4 h-4 text-blue-500" /><span>{item}</span></motion.div></StaggerItem>
+              <StaggerItem key={item}><motion.div className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg" whileHover={{ x: 4 }}><Shield className="w-4 h-4 text-gray-500" /><span>{item}</span></motion.div></StaggerItem>
             ))}
           </StaggerContainer>
         </motion.div>
@@ -496,7 +496,7 @@ const CompraView = () => (
         <StaggerContainer className="flex flex-wrap justify-center gap-4" staggerDelay={0.1} initialDelay={1.3}>
           {["Enviado a notaría", "Transferencia en proceso", "Finalización de transferencia"].map((item, index) => (
             <StaggerItem key={item}>
-              <motion.div className={`px-5 py-3 rounded-xl border-2 ${index === 2 ? "bg-emerald-500/20 border-emerald-500 text-emerald-700" : "bg-muted/50 border-border"}`} whileHover={{ scale: 1.05 }}>
+              <motion.div className={`px-5 py-3 rounded-xl border-2 ${index === 2 ? "bg-orange-500/20 border-orange-500 text-orange-700" : "bg-muted/50 border-border"}`} whileHover={{ scale: 1.05 }}>
                 <span className="text-sm font-medium">{item}</span>
               </motion.div>
             </StaggerItem>
@@ -517,9 +517,9 @@ const ReestructurasView = () => (
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
         {[
           { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-orange-500/20", textColor: "text-orange-600" },
-          { icon: Calculator, label: "Proyección deuda", color: "bg-amber-500/20", textColor: "text-amber-600" },
-          { icon: FileSignature, label: "Nueva línea", color: "bg-blue-500/20", textColor: "text-blue-600" },
-          { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-emerald-500/20", textColor: "text-emerald-600" },
+          { icon: Calculator, label: "Proyección deuda", color: "bg-orange-400/20", textColor: "text-orange-500" },
+          { icon: FileSignature, label: "Nueva línea", color: "bg-gray-500/20", textColor: "text-gray-600" },
+          { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-orange-300/20", textColor: "text-orange-500" },
         ].map((step, index) => (
           <motion.div key={step.label} className="flex items-center gap-3" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4 + index * 0.15 }}>
             <motion.div className={`w-20 h-20 rounded-2xl ${step.color} flex flex-col items-center justify-center`} whileHover={{ scale: 1.1 }}>
@@ -533,21 +533,21 @@ const ReestructurasView = () => (
     </SubZoomContainer>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       <SubZoomContainer delay={0.9} direction="bottom">
-        <motion.div className="p-6 rounded-2xl bg-card border-2 border-amber-500/30 shadow-lg" whileHover={{ scale: 1.01 }}>
-          <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><AlertTriangle className="w-5 h-5 text-amber-500" />Detección de Atrasos</h4>
+        <motion.div className="p-6 rounded-2xl bg-card border-2 border-orange-500/30 shadow-lg" whileHover={{ scale: 1.01 }}>
+          <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><AlertTriangle className="w-5 h-5 text-orange-500" />Detección de Atrasos</h4>
           <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={1.0}>
             {["Recupera adeudo del arrendamiento con atrasos", "Genera proyecciones de deuda total", "Estudio de alternativas de pago"].map((item) => (
-              <StaggerItem key={item}><motion.div className="p-3 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-sm" whileHover={{ x: 4 }}>{item}</motion.div></StaggerItem>
+              <StaggerItem key={item}><motion.div className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm" whileHover={{ x: 4 }}>{item}</motion.div></StaggerItem>
             ))}
           </StaggerContainer>
         </motion.div>
       </SubZoomContainer>
       <SubZoomContainer delay={1.1} direction="bottom">
-        <motion.div className="p-6 rounded-2xl bg-card border-2 border-emerald-500/30 shadow-lg" whileHover={{ scale: 1.01 }}>
-          <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><RefreshCw className="w-5 h-5 text-emerald-500" />Nueva Formalización</h4>
+        <motion.div className="p-6 rounded-2xl bg-card border-2 border-gray-400/30 shadow-lg" whileHover={{ scale: 1.01 }}>
+          <h4 className="font-bold text-lg mb-4 flex items-center gap-2"><RefreshCw className="w-5 h-5 text-gray-500" />Nueva Formalización</h4>
           <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={1.2}>
             {["Nueva línea con indicador de reestructura", "Nuevas condiciones de pago", "Generación de contratos y cronogramas"].map((item) => (
-              <StaggerItem key={item}><motion.div className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm" whileHover={{ x: 4 }}>{item}</motion.div></StaggerItem>
+              <StaggerItem key={item}><motion.div className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm" whileHover={{ x: 4 }}>{item}</motion.div></StaggerItem>
             ))}
           </StaggerContainer>
         </motion.div>

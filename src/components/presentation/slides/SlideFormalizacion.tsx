@@ -14,9 +14,7 @@ export const SlideFormalizacion = () => {
         </p>
       </SubZoomContainer>
 
-      {/* Main process cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Formalización */}
         <SubZoomContainer delay={0.3} direction="left">
           <motion.div
             className="p-6 rounded-2xl bg-card border-2 border-primary/30 shadow-lg h-full"
@@ -51,34 +49,33 @@ export const SlideFormalizacion = () => {
           </motion.div>
         </SubZoomContainer>
 
-        {/* Operación */}
         <SubZoomContainer delay={0.5} direction="bottom">
           <motion.div
-            className="p-6 rounded-2xl bg-card border-2 border-emerald-500/30 shadow-lg h-full"
+            className="p-6 rounded-2xl bg-card border-2 border-gray-400/30 shadow-lg h-full"
             whileHover={{ y: -4 }}
           >
             <motion.div
-              className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4"
+              className="w-14 h-14 rounded-xl bg-gray-500/20 flex items-center justify-center mb-4"
               initial={{ scale: 0, rotate: -90 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.7, type: "spring" }}
             >
-              <Calendar className="w-7 h-7 text-emerald-600" />
+              <Calendar className="w-7 h-7 text-gray-600" />
             </motion.div>
             <h3 className="text-xl font-bold mb-4">Operación</h3>
             <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={0.8}>
               <StaggerItem>
-                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm">
                   <span className="font-medium">Programación de pagos</span>
                 </div>
               </StaggerItem>
               <StaggerItem>
-                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm">
                   <span className="font-medium">Tabla de pagos final</span>
                 </div>
               </StaggerItem>
               <StaggerItem>
-                <div className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm">
                   <span className="font-medium">Generar operación</span>
                 </div>
               </StaggerItem>
@@ -86,34 +83,33 @@ export const SlideFormalizacion = () => {
           </motion.div>
         </SubZoomContainer>
 
-        {/* Cargos */}
         <SubZoomContainer delay={0.7} direction="right">
           <motion.div
-            className="p-6 rounded-2xl bg-card border-2 border-amber-500/30 shadow-lg h-full"
+            className="p-6 rounded-2xl bg-card border-2 border-orange-400/30 shadow-lg h-full"
             whileHover={{ y: -4 }}
           >
             <motion.div
-              className="w-14 h-14 rounded-xl bg-amber-500/20 flex items-center justify-center mb-4"
+              className="w-14 h-14 rounded-xl bg-orange-400/20 flex items-center justify-center mb-4"
               initial={{ scale: 0, rotate: -90 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ delay: 0.9, type: "spring" }}
             >
-              <Calculator className="w-7 h-7 text-amber-600" />
+              <Calculator className="w-7 h-7 text-orange-500" />
             </motion.div>
             <h3 className="text-xl font-bold mb-4">Cargos Iniciales</h3>
             <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={1.0}>
               <StaggerItem>
-                <div className="p-3 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm">
                   <span className="font-medium">Comisión por apertura</span>
                 </div>
               </StaggerItem>
               <StaggerItem>
-                <div className="p-3 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm">
                   <span className="font-medium">Depósito de garantía</span>
                 </div>
               </StaggerItem>
               <StaggerItem>
-                <div className="p-3 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-sm">
+                <div className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm">
                   <span className="font-medium">Documentación legal</span>
                 </div>
               </StaggerItem>
@@ -122,7 +118,6 @@ export const SlideFormalizacion = () => {
         </SubZoomContainer>
       </div>
 
-      {/* Bottom indicators */}
       <SubZoomContainer delay={1.2} direction="zoom" className="mt-8">
         <div className="flex flex-wrap justify-center gap-4">
           {[

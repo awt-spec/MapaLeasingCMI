@@ -16,7 +16,6 @@ export const SlideFlujoOperativo = () => {
 
       <SubZoomContainer delay={0.3} direction="zoom">
         <div className="bg-card/40 border border-border rounded-2xl p-6 md:p-8">
-          {/* Top: Title bar */}
           <motion.div
             className="text-center mb-6"
             initial={{ opacity: 0, y: -10 }}
@@ -28,7 +27,6 @@ export const SlideFlujoOperativo = () => {
             </span>
           </motion.div>
 
-          {/* Banco at top center */}
           <StaggerContainer className="flex justify-center mb-2" staggerDelay={0.1} initialDelay={0.5}>
             <StaggerItem>
               <ActorBox
@@ -40,14 +38,12 @@ export const SlideFlujoOperativo = () => {
             </StaggerItem>
           </StaggerContainer>
 
-          {/* Arrows down from Banco to both sides */}
           <motion.div
             className="flex justify-between items-start px-8 md:px-16 my-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            {/* Left arrow: Banco → Proveedor */}
             <div className="flex flex-col items-center">
               <ArrowDown className="w-4 h-4 text-muted-foreground" />
               <span className="text-[10px] text-muted-foreground font-medium mt-0.5 text-center leading-tight">
@@ -56,7 +52,6 @@ export const SlideFlujoOperativo = () => {
               <ArrowDown className="w-4 h-4 text-muted-foreground mt-0.5" />
             </div>
 
-            {/* Right arrow: Entidad → Banco (upward, red) */}
             <div className="flex flex-col items-center">
               <div className="flex flex-col items-center">
                 <motion.div
@@ -77,7 +72,6 @@ export const SlideFlujoOperativo = () => {
               </div>
             </div>
 
-            {/* Middle: Renta payment */}
             <div className="flex flex-col items-center">
               <ArrowDown className="w-4 h-4 text-muted-foreground rotate-180" />
               <span className="text-[10px] text-muted-foreground font-medium mt-0.5 text-center leading-tight">
@@ -87,19 +81,17 @@ export const SlideFlujoOperativo = () => {
             </div>
           </motion.div>
 
-          {/* Proveedor and Entidad side by side */}
           <StaggerContainer className="flex justify-between items-start px-4 md:px-8 mt-2" staggerDelay={0.15} initialDelay={0.9}>
             <StaggerItem>
               <ActorBox
                 icon={Truck}
                 title="Proveedor"
                 subtitle="Provee o construye el bien"
-                color="bg-amber-500/10 border-amber-500/30"
-                iconColor="text-amber-600"
+                color="bg-orange-500/10 border-orange-500/30"
+                iconColor="text-orange-600"
               />
             </StaggerItem>
 
-            {/* Center: horizontal arrows between Proveedor & Entidad */}
             <StaggerItem className="flex flex-col items-center justify-center gap-3 pt-4 flex-1 px-2">
               <motion.div
                 className="flex items-center gap-1 w-full"
@@ -131,13 +123,12 @@ export const SlideFlujoOperativo = () => {
                 icon={User}
                 title="Entidad Pública"
                 subtitle="Requiere bienes productivos"
-                color="bg-blue-500/10 border-blue-500/30"
-                iconColor="text-blue-600"
+                color="bg-gray-500/10 border-gray-500/30"
+                iconColor="text-gray-600"
               />
             </StaggerItem>
           </StaggerContainer>
 
-          {/* Legend */}
           <motion.div
             className="flex items-center justify-center gap-6 mt-6 pt-4 border-t border-border/50"
             initial={{ opacity: 0 }}

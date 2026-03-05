@@ -13,16 +13,16 @@ export interface FlowNodeProps {
 
 const variantStyles = {
   primary: {
-    bg: "bg-amber-100 dark:bg-amber-900/30",
-    border: "border-amber-300 dark:border-amber-700",
-    iconBg: "bg-amber-200 dark:bg-amber-800",
-    iconColor: "text-amber-700 dark:text-amber-300",
+    bg: "bg-orange-100 dark:bg-orange-900/30",
+    border: "border-orange-300 dark:border-orange-700",
+    iconBg: "bg-orange-200 dark:bg-orange-800",
+    iconColor: "text-orange-700 dark:text-orange-300",
   },
   secondary: {
-    bg: "bg-blue-100 dark:bg-blue-900/30",
-    border: "border-blue-300 dark:border-blue-700",
-    iconBg: "bg-blue-200 dark:bg-blue-800",
-    iconColor: "text-blue-700 dark:text-blue-300",
+    bg: "bg-gray-100 dark:bg-gray-900/30",
+    border: "border-gray-300 dark:border-gray-700",
+    iconBg: "bg-gray-200 dark:bg-gray-800",
+    iconColor: "text-gray-700 dark:text-gray-300",
   },
   accent: {
     bg: "bg-orange-100 dark:bg-orange-900/30",

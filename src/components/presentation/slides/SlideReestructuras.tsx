@@ -14,14 +14,13 @@ export const SlideReestructuras = () => {
         </p>
       </SubZoomContainer>
 
-      {/* Flow diagram */}
       <SubZoomContainer delay={0.3} direction="left">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-10">
           {[
             { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-orange-500/20", textColor: "text-orange-600" },
-            { icon: Calculator, label: "Proyección deuda", color: "bg-amber-500/20", textColor: "text-amber-600" },
-            { icon: FileSignature, label: "Nueva línea", color: "bg-blue-500/20", textColor: "text-blue-600" },
-            { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-emerald-500/20", textColor: "text-emerald-600" },
+            { icon: Calculator, label: "Proyección deuda", color: "bg-orange-400/20", textColor: "text-orange-500" },
+            { icon: FileSignature, label: "Nueva línea", color: "bg-gray-500/20", textColor: "text-gray-600" },
+            { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-orange-300/20", textColor: "text-orange-500" },
           ].map((step, index) => (
             <motion.div
               key={step.label}
@@ -45,15 +44,14 @@ export const SlideReestructuras = () => {
         </div>
       </SubZoomContainer>
 
-      {/* Details cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SubZoomContainer delay={0.9} direction="bottom">
           <motion.div
-            className="p-6 rounded-2xl bg-card border-2 border-amber-500/30 shadow-lg"
+            className="p-6 rounded-2xl bg-card border-2 border-orange-500/30 shadow-lg"
             whileHover={{ scale: 1.01 }}
           >
             <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-amber-500" />
+              <AlertTriangle className="w-5 h-5 text-orange-500" />
               Detección de Atrasos
             </h4>
             <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={1.0}>
@@ -64,7 +62,7 @@ export const SlideReestructuras = () => {
               ].map((item) => (
                 <StaggerItem key={item}>
                   <motion.div
-                    className="p-3 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-sm"
+                    className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm"
                     whileHover={{ x: 4 }}
                   >
                     {item}
@@ -77,11 +75,11 @@ export const SlideReestructuras = () => {
 
         <SubZoomContainer delay={1.1} direction="bottom">
           <motion.div
-            className="p-6 rounded-2xl bg-card border-2 border-emerald-500/30 shadow-lg"
+            className="p-6 rounded-2xl bg-card border-2 border-gray-400/30 shadow-lg"
             whileHover={{ scale: 1.01 }}
           >
             <h4 className="font-bold text-lg mb-4 flex items-center gap-2">
-              <RefreshCw className="w-5 h-5 text-emerald-500" />
+              <RefreshCw className="w-5 h-5 text-gray-500" />
               Nueva Formalización
             </h4>
             <StaggerContainer className="space-y-3" staggerDelay={0.1} initialDelay={1.2}>
@@ -92,7 +90,7 @@ export const SlideReestructuras = () => {
               ].map((item) => (
                 <StaggerItem key={item}>
                   <motion.div
-                    className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm"
+                    className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm"
                     whileHover={{ x: 4 }}
                   >
                     {item}
@@ -104,7 +102,6 @@ export const SlideReestructuras = () => {
         </SubZoomContainer>
       </div>
 
-      {/* Bottom note */}
       <SubZoomContainer delay={1.5} direction="zoom" className="mt-8">
         <motion.div
           className="p-4 rounded-xl bg-primary/10 border border-primary/30 text-center"

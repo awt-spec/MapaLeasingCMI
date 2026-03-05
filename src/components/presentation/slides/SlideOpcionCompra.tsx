@@ -14,7 +14,6 @@ export const SlideOpcionCompra = () => {
         </p>
       </SubZoomContainer>
 
-      {/* Main process */}
       <SubZoomContainer delay={0.3} direction="zoom">
         <div className="p-8 rounded-3xl bg-gradient-to-br from-primary/5 via-card to-primary/5 border border-primary/20 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -56,7 +55,6 @@ export const SlideOpcionCompra = () => {
         </div>
       </SubZoomContainer>
 
-      {/* Transfer flow */}
       <SubZoomContainer delay={1.2} direction="bottom" className="mt-8">
         <div className="p-6 rounded-2xl bg-card border border-border shadow-lg">
           <h3 className="font-bold text-lg mb-6 text-center">Flujo de Transferencia Vehicular</h3>
@@ -70,7 +68,7 @@ export const SlideOpcionCompra = () => {
                 <motion.div
                   className={`px-5 py-3 rounded-xl border-2 ${
                     index === 2 
-                      ? "bg-emerald-500/20 border-emerald-500 text-emerald-700" 
+                      ? "bg-orange-500/20 border-orange-500 text-orange-700" 
                       : "bg-muted/50 border-border"
                   }`}
                   whileHover={{ scale: 1.05 }}

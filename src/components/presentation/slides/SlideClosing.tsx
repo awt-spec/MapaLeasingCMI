@@ -52,7 +52,7 @@ export const SlideClosing = () => {
             </motion.div>
 
             <motion.div
-              className="h-20 rounded-2xl bg-card shadow-xl flex items-center justify-center px-3 py-2 ring-4 ring-border/30 self-center"
+              className="h-20 w-20 rounded-2xl bg-card shadow-xl flex items-center justify-center p-3 ring-4 ring-border/30"
               initial={{ x: 60, opacity: 0, scale: 0.5 }}
               animate={{ x: 0, opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}

@@ -296,7 +296,7 @@ const ActivosView = () => {
     <AnimatePresence mode="wait">
       {!subSelected ? (
         <motion.div key="activos-overview" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.1 }} transition={{ duration: 0.4 }}>
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-3" staggerDelay={0.1} initialDelay={0.2}>
+          <StaggerContainer className="grid grid-cols-3 gap-3 max-w-3xl mx-auto" staggerDelay={0.1} initialDelay={0.2}>
             {activosSubProcesses.map((process) => (
               <StaggerItem key={process.id}>
                 <motion.div className="bg-card rounded-2xl border border-border shadow-md p-4 flex flex-col h-full cursor-pointer" whileHover={{ y: -4, boxShadow: "0 16px 32px -12px rgba(0,0,0,0.15)" }} onClick={() => setSubSelected(process.id)}>

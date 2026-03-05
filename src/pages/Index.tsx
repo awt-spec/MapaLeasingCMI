@@ -10,7 +10,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { SlideIntro } from "@/components/presentation/slides/SlideIntro";
 import { SlideFlujoOperativo } from "@/components/presentation/slides/SlideFlujoOperativo";
 import { SlideReglasNegocioNew } from "@/components/presentation/slides/SlideReglasNegocioNew";
-import { SlideAnalisisRiesgos } from "@/components/presentation/slides/SlideAnalisisRiesgos";
 import { SlideProcesosFlow } from "@/components/presentation/slides/SlideProcesosFlow";
 import { SlideFormalizacion } from "@/components/presentation/slides/SlideFormalizacion";
 import { SlideAdminActivos } from "@/components/presentation/slides/SlideAdminActivos";
@@ -21,12 +20,11 @@ const slideConfig = [
   { id: 0, component: SlideIntro, labelKey: "slide.inicio" },
   { id: 1, component: SlideFlujoOperativo, labelKey: "slide.flujo" },
   { id: 2, component: SlideReglasNegocioNew, labelKey: "slide.reglas" },
-  { id: 3, component: SlideAnalisisRiesgos, labelKey: "slide.riesgos" },
-  { id: 4, component: SlideProcesosFlow, labelKey: "slide.comerciales" },
-  { id: 5, component: SlideFormalizacion, labelKey: "slide.formalizacion" },
-  { id: 6, component: SlideAdminActivos, labelKey: "slide.activos" },
-  { id: 7, component: SlideReportes, labelKey: "slide.reportes" },
-  { id: 8, component: SlideClosing, labelKey: "slide.cierre" },
+  { id: 3, component: SlideProcesosFlow, labelKey: "slide.comerciales" },
+  { id: 4, component: SlideFormalizacion, labelKey: "slide.formalizacion" },
+  { id: 5, component: SlideAdminActivos, labelKey: "slide.activos" },
+  { id: 6, component: SlideReportes, labelKey: "slide.reportes" },
+  { id: 7, component: SlideClosing, labelKey: "slide.cierre" },
 ];
 
 const Index = () => {

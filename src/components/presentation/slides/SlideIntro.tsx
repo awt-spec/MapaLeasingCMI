@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logoSysde from "@/assets/logo_sysde.png";
-import logoCmi from "@/assets/logo_cmi.png";
+import logoCmi from "@/assets/logo_cmi_new.png";
 import {
   Play, HelpCircle, Scale, GitBranch, Layers, LayoutGrid,
   Settings, BarChart3, Flag

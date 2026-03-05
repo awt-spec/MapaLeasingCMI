@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   es: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "Arrendamiento",
     "header.demo": "Agendar una Demo",
     "slide.inicio": "Inicio",
@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Map nodes
     "map.title": "Arrendamiento",
     "map.subtitle": "Mapa Funcional",
-    "map.clients": "Líderes que confían en Sysde",
+    "map.clients": "Líderes que confían en CMI",
     "node.inicio": "Inicio",
     "node.flujo": "Flujo Operativo",
     "node.reglas": "Reglas",
@@ -68,7 +68,7 @@ const translations: Record<Language, Record<string, string>> = {
     "lang.bg": "Български",
   },
   en: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "Leasing",
     "header.demo": "Schedule a Demo",
     "slide.inicio": "Home",
@@ -82,7 +82,7 @@ const translations: Record<Language, Record<string, string>> = {
     "slide.cierre": "Closing",
     "map.title": "Leasing",
     "map.subtitle": "Functional Map",
-    "map.clients": "Leaders who trust Sysde",
+    "map.clients": "Leaders who trust CMI",
     "node.inicio": "Home",
     "node.flujo": "Operative Flow",
     "node.reglas": "Rules",
@@ -122,7 +122,7 @@ const translations: Record<Language, Record<string, string>> = {
     "lang.bg": "Български",
   },
   fr: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "Crédit-bail",
     "header.demo": "Planifier une Démo",
     "slide.inicio": "Accueil",
@@ -136,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     "slide.cierre": "Clôture",
     "map.title": "Crédit-bail",
     "map.subtitle": "Carte Fonctionnelle",
-    "map.clients": "Leaders qui font confiance à Sysde",
+    "map.clients": "Leaders qui font confiance à CMI",
     "node.inicio": "Accueil",
     "node.flujo": "Flux Opérationnel",
     "node.reglas": "Règles",
@@ -176,7 +176,7 @@ const translations: Record<Language, Record<string, string>> = {
     "lang.bg": "Български",
   },
   ko: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "리스",
     "header.demo": "데모 예약",
     "slide.inicio": "홈",
@@ -190,7 +190,7 @@ const translations: Record<Language, Record<string, string>> = {
     "slide.cierre": "종료",
     "map.title": "리스",
     "map.subtitle": "기능 맵",
-    "map.clients": "Sysde를 신뢰하는 리더들",
+    "map.clients": "CMI를 신뢰하는 리더들",
     "node.inicio": "홈",
     "node.flujo": "운영 흐름",
     "node.reglas": "규칙",
@@ -230,7 +230,7 @@ const translations: Record<Language, Record<string, string>> = {
     "lang.bg": "Български",
   },
   pl: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "Leasing",
     "header.demo": "Umów Demo",
     "slide.inicio": "Start",
@@ -244,7 +244,7 @@ const translations: Record<Language, Record<string, string>> = {
     "slide.cierre": "Zamknięcie",
     "map.title": "Leasing",
     "map.subtitle": "Mapa Funkcjonalna",
-    "map.clients": "Liderzy, którzy ufają Sysde",
+    "map.clients": "Liderzy, którzy ufają CMI",
     "node.inicio": "Start",
     "node.flujo": "Przepływ Operacyjny",
     "node.reglas": "Reguły",
@@ -284,7 +284,7 @@ const translations: Record<Language, Record<string, string>> = {
     "lang.bg": "Български",
   },
   bg: {
-    "header.title": "Sysde",
+    "header.title": "CMI",
     "header.subtitle": "Лизинг",
     "header.demo": "Заявка за Демо",
     "slide.inicio": "Начало",
@@ -298,7 +298,7 @@ const translations: Record<Language, Record<string, string>> = {
     "slide.cierre": "Затваряне",
     "map.title": "Лизинг",
     "map.subtitle": "Функционална Карта",
-    "map.clients": "Лидери, които се доверяват на Sysde",
+    "map.clients": "Лидери, които се доверяват на CMI",
     "node.inicio": "Начало",
     "node.flujo": "Оперативен Поток",
     "node.reglas": "Правила",

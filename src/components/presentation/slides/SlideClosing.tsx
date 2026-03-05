@@ -1,19 +1,36 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { SubZoomContainer, StaggerContainer, StaggerItem } from "../SubZoomContainer";
+import logoCmi from "@/assets/logo_cmi_new.png";
 
 export const SlideClosing = () => {
   return (
     <div className="w-full max-w-5xl mx-auto text-center">
       <SubZoomContainer delay={0.1} direction="zoom">
-        <motion.div
-          className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-primary mb-6 shadow-lg"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-        >
-          <span className="text-5xl font-bold text-primary-foreground">S</span>
-        </motion.div>
+        <div className="flex items-center justify-center gap-6 mb-6">
+          <motion.div
+            className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-primary shadow-lg"
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          >
+            <span className="text-5xl font-bold text-primary-foreground">S</span>
+          </motion.div>
+          <motion.span
+            className="text-muted-foreground text-2xl font-light"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >×</motion.span>
+          <motion.div
+            className="inline-flex items-center justify-center h-24 rounded-2xl bg-card shadow-lg px-3 py-2"
+            initial={{ scale: 0, rotate: 180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+          >
+            <img src={logoCmi} alt="CMI" className="h-full w-auto object-contain" />
+          </motion.div>
+        </div>
       </SubZoomContainer>
 
       <SubZoomContainer delay={0.4} direction="bottom">

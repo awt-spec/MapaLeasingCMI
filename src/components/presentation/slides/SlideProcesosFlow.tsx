@@ -170,7 +170,7 @@ export const SlideProcesosFlow = () => {
               </div>
               <p className="text-lg text-muted-foreground">Selecciona un proceso para ver su diagrama</p>
             </SubZoomContainer>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {processes.map((process, index) => (
                 <CategoryCard key={process.id} {...process} delay={0.2 + index * 0.15} onClick={() => setSelectedProcess(process.id)} />
               ))}

@@ -12,7 +12,7 @@ export const SlideClosing = () => {
           animate={{ scale: 1, rotate: 0 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
         >
-          <span className="text-5xl font-bold text-primary-foreground">S</span>
+          <span className="text-3xl font-bold text-primary-foreground">CMI</span>
         </motion.div>
       </SubZoomContainer>
 
@@ -24,7 +24,7 @@ export const SlideClosing = () => {
 
       <SubZoomContainer delay={0.6} direction="bottom">
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          <span className="text-primary font-semibold">Sysde</span> - Potenciando los servicios financieros en el mundo digital
+          <span className="text-primary font-semibold">CMI</span> — Corporación Multi Inversiones
         </p>
       </SubZoomContainer>
 

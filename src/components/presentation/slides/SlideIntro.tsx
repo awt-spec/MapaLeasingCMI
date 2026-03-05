@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoSysde from "@/assets/logo_sysde.png";
+import logoCmi from "@/assets/logo_cmi.png";
 import {
   Play, HelpCircle, Scale, GitBranch, Layers, LayoutGrid,
   Settings, BarChart3, Flag
@@ -14,7 +14,7 @@ const clients = [
 ];
 
 const nodeConfig = [
-  { id: 1, labelKey: "node.inicio", icon: Play, x: 300, y: 40, color: "#dc2626" },
+  { id: 1, labelKey: "node.inicio", icon: Play, x: 300, y: 40, color: "#f59e0b" },
   { id: 2, labelKey: "node.flujo", icon: HelpCircle, x: 100, y: 120, color: "#3b82f6" },
   { id: 3, labelKey: "node.reglas", icon: Scale, x: 500, y: 120, color: "#f59e0b" },
   { id: 4, labelKey: "node.riesgos", icon: GitBranch, x: 300, y: 200, color: "#06b6d4" },
@@ -22,7 +22,7 @@ const nodeConfig = [
   { id: 6, labelKey: "node.formalizacion", icon: Layers, x: 500, y: 280, color: "#8b5cf6" },
   { id: 7, labelKey: "node.activos", icon: LayoutGrid, x: 300, y: 360, color: "#10b981" },
   { id: 8, labelKey: "node.reportes", icon: BarChart3, x: 100, y: 440, color: "#6366f1" },
-  { id: 9, labelKey: "node.cierre", icon: Flag, x: 500, y: 440, color: "#b91c1c" },
+  { id: 9, labelKey: "node.cierre", icon: Flag, x: 500, y: 440, color: "#f59e0b" },
 ];
 
 const connections: [number, number][] = [
@@ -59,8 +59,8 @@ export const SlideIntro = () => {
       {/* Title */}
       <SubZoomContainer delay={0.1} direction="zoom">
         <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary shadow-lg p-1.5">
-            <img src={logoSysde} alt="Sysde" className="w-full h-full object-contain" />
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-card shadow-lg p-1">
+            <img src={logoCmi} alt="CMI" className="w-full h-full object-contain" />
           </div>
           <div className="text-left">
             <h1 className="text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">

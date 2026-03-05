@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Maximize2, Minimize2 } from "lucide-react";
-import logoCmi from "@/assets/logo_cmi.png";
+import logoSysde from "@/assets/logo_sysde.png";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -34,8 +34,8 @@ export const Header = ({ showLogo = true }: HeaderProps) => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-card flex items-center justify-center p-0.5">
-            <img src={logoCmi} alt="CMI" className="w-full h-full object-contain" />
+          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center p-1">
+            <img src={logoSysde} alt="Sysde" className="w-full h-full object-contain" />
           </div>
           <div>
             <h1 className="text-lg font-bold text-foreground">{t("header.title")}</h1>

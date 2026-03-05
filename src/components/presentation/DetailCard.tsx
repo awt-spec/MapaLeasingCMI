@@ -26,7 +26,7 @@ export const DetailCard = ({
     <motion.div
       className={`p-5 rounded-2xl border-2 cursor-pointer transition-all ${
         highlighted 
-          ? "bg-amber-50/50 border-amber-200 dark:bg-amber-950/20 dark:border-amber-800" 
+          ? "bg-orange-50/50 border-orange-200 dark:bg-orange-950/20 dark:border-orange-800" 
           : "bg-card border-border hover:border-primary/30"
       }`}
       initial={{ opacity: 0, y: 20, scale: 0.9 }}

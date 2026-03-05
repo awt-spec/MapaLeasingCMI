@@ -16,22 +16,22 @@ interface FlowBoxProps {
 
 const variantStyles: Record<FlowVariant, string> = {
   default: "border-border bg-card hover:border-primary/50",
-  success: "border-emerald-500/50 bg-emerald-50/80 dark:bg-emerald-950/30 hover:border-emerald-500",
-  danger: "border-red-500/50 bg-red-50/80 dark:bg-red-950/30 hover:border-red-500",
-  warning: "border-amber-500/50 bg-amber-50/80 dark:bg-amber-950/30 hover:border-amber-500",
-  decision: "border-blue-500/50 bg-blue-50/80 dark:bg-blue-950/30 hover:border-blue-500",
-  info: "border-sky-500/50 bg-sky-50/80 dark:bg-sky-950/30 hover:border-sky-500",
-  special: "border-purple-500/50 bg-purple-50/80 dark:bg-purple-950/30 hover:border-purple-500",
+  success: "border-orange-500/50 bg-orange-50/80 dark:bg-orange-950/30 hover:border-orange-500",
+  danger: "border-gray-500/50 bg-gray-50/80 dark:bg-gray-950/30 hover:border-gray-500",
+  warning: "border-orange-400/50 bg-orange-50/80 dark:bg-orange-950/30 hover:border-orange-400",
+  decision: "border-gray-400/50 bg-gray-50/80 dark:bg-gray-950/30 hover:border-gray-400",
+  info: "border-orange-300/50 bg-orange-50/80 dark:bg-orange-950/30 hover:border-orange-300",
+  special: "border-gray-600/50 bg-gray-50/80 dark:bg-gray-950/30 hover:border-gray-600",
 };
 
 const iconColors: Record<FlowVariant, string> = {
   default: "text-primary",
-  success: "text-emerald-600",
-  danger: "text-red-600",
-  warning: "text-amber-600",
-  decision: "text-blue-600",
-  info: "text-sky-600",
-  special: "text-purple-600",
+  success: "text-orange-600",
+  danger: "text-gray-600",
+  warning: "text-orange-500",
+  decision: "text-gray-600",
+  info: "text-orange-500",
+  special: "text-gray-600",
 };
 
 export const FlowBox = ({
@@ -104,8 +104,8 @@ export const DecisionBox = ({ label, delay = 0 }: DecisionBoxProps) => (
     animate={{ opacity: 1, scale: 1, rotate: 45 }}
     transition={{ delay, duration: 0.5, type: "spring", stiffness: 150 }}
   >
-    <div className="w-20 h-20 bg-blue-500/20 border-2 border-blue-500 flex items-center justify-center">
-      <span className="-rotate-45 text-xs font-semibold text-blue-700 text-center px-1">
+    <div className="w-20 h-20 bg-gray-500/20 border-2 border-gray-500 flex items-center justify-center">
+      <span className="-rotate-45 text-xs font-semibold text-gray-700 text-center px-1">
         {label}
       </span>
     </div>

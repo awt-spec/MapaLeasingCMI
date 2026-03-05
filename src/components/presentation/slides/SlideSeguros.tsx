@@ -14,7 +14,6 @@ export const SlideSeguros = () => {
         </p>
       </SubZoomContainer>
 
-      {/* Process flow */}
       <SubZoomContainer delay={0.3} direction="left">
         <div className="flex flex-col md:flex-row items-center gap-4 justify-center mb-10">
           {[
@@ -45,7 +44,6 @@ export const SlideSeguros = () => {
         </div>
       </SubZoomContainer>
 
-      {/* FAQ Style content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SubZoomContainer delay={0.8} direction="bottom">
           <motion.div
@@ -65,7 +63,7 @@ export const SlideSeguros = () => {
                     className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg"
                     whileHover={{ x: 4 }}
                   >
-                    <CheckCircle className="w-4 h-4 text-emerald-500" />
+                    <CheckCircle className="w-4 h-4 text-orange-500" />
                     <span>{item}</span>
                   </motion.div>
                 </StaggerItem>
@@ -92,7 +90,7 @@ export const SlideSeguros = () => {
                     className="flex items-center gap-2 text-sm p-2 bg-muted/50 rounded-lg"
                     whileHover={{ x: 4 }}
                   >
-                    <Shield className="w-4 h-4 text-blue-500" />
+                    <Shield className="w-4 h-4 text-gray-500" />
                     <span>{item}</span>
                   </motion.div>
                 </StaggerItem>

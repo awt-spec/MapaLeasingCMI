@@ -14,22 +14,21 @@ export const SlideReportes = () => {
         </p>
       </SubZoomContainer>
 
-      {/* Main grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <SubZoomContainer delay={0.3} direction="left">
           <motion.div
             className="p-6 rounded-2xl bg-card border border-border shadow-lg h-full"
             whileHover={{ y: -4 }}
           >
-            <div className="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
-              <FileBarChart className="w-7 h-7 text-blue-600" />
+            <div className="w-14 h-14 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4">
+              <FileBarChart className="w-7 h-7 text-orange-600" />
             </div>
             <h3 className="text-xl font-bold mb-4">Reportes</h3>
             <StaggerContainer className="space-y-2" staggerDelay={0.1} initialDelay={0.5}>
               {["Regulatorios", "Arrendamientos", "Préstamos", "Clientes"].map((item) => (
                 <StaggerItem key={item}>
                   <motion.div
-                    className="p-2 bg-blue-50 dark:bg-blue-950/30 rounded-lg text-sm"
+                    className="p-2 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm"
                     whileHover={{ x: 4 }}
                   >
                     {item}
@@ -45,15 +44,15 @@ export const SlideReportes = () => {
             className="p-6 rounded-2xl bg-card border border-border shadow-lg h-full"
             whileHover={{ y: -4 }}
           >
-            <div className="w-14 h-14 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4">
-              <Database className="w-7 h-7 text-emerald-600" />
+            <div className="w-14 h-14 rounded-xl bg-gray-500/20 flex items-center justify-center mb-4">
+              <Database className="w-7 h-7 text-gray-600" />
             </div>
             <h3 className="text-xl font-bold mb-4">Consultas</h3>
             <StaggerContainer className="space-y-2" staggerDelay={0.1} initialDelay={0.7}>
               {["Transacciones", "Históricos", "Operaciones", "Estados financieros"].map((item) => (
                 <StaggerItem key={item}>
                   <motion.div
-                    className="p-2 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg text-sm"
+                    className="p-2 bg-gray-50 dark:bg-gray-950/30 rounded-lg text-sm"
                     whileHover={{ x: 4 }}
                   >
                     {item}
@@ -69,15 +68,15 @@ export const SlideReportes = () => {
             className="p-6 rounded-2xl bg-card border border-border shadow-lg h-full"
             whileHover={{ y: -4 }}
           >
-            <div className="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
-              <FileText className="w-7 h-7 text-purple-600" />
+            <div className="w-14 h-14 rounded-xl bg-orange-400/20 flex items-center justify-center mb-4">
+              <FileText className="w-7 h-7 text-orange-500" />
             </div>
             <h3 className="text-xl font-bold mb-4">Bitácora</h3>
             <StaggerContainer className="space-y-2" staggerDelay={0.1} initialDelay={0.9}>
               {["Consultas", "Reportes", "Transacciones", "Históricos"].map((item) => (
                 <StaggerItem key={item}>
                   <motion.div
-                    className="p-2 bg-purple-50 dark:bg-purple-950/30 rounded-lg text-sm"
+                    className="p-2 bg-orange-50 dark:bg-orange-950/30 rounded-lg text-sm"
                     whileHover={{ x: 4 }}
                   >
                     {item}
@@ -89,7 +88,6 @@ export const SlideReportes = () => {
         </SubZoomContainer>
       </div>
 
-      {/* Bottom section */}
       <SubZoomContainer delay={1.3} direction="zoom">
         <div className="p-6 rounded-2xl bg-gradient-to-r from-muted/30 via-muted/50 to-muted/30 border border-border">
           <h3 className="font-bold text-lg mb-4 text-center">Información de Origen</h3>

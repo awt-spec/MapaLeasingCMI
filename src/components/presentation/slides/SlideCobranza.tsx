@@ -15,7 +15,6 @@ export const SlideCobranza = () => {
       </SubZoomContainer>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Pago a Proveedores */}
         <SubZoomContainer delay={0.3} direction="left">
           <motion.div
             className="p-6 rounded-2xl bg-card border border-border shadow-lg h-full"
@@ -27,8 +26,8 @@ export const SlideCobranza = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
-                <Banknote className="w-6 h-6 text-emerald-600" />
+              <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center">
+                <Banknote className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold">Pago a Proveedores</h3>
             </motion.div>
@@ -42,7 +41,7 @@ export const SlideCobranza = () => {
               ].map((item) => (
                 <StaggerItem key={item.label}>
                   <motion.div
-                    className="p-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-lg"
+                    className="p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg"
                     whileHover={{ x: 4 }}
                   >
                     <span className="font-medium text-sm">{item.label}</span>
@@ -54,7 +53,6 @@ export const SlideCobranza = () => {
           </motion.div>
         </SubZoomContainer>
 
-        {/* Cobranza */}
         <SubZoomContainer delay={0.5} direction="right">
           <motion.div
             className="p-6 rounded-2xl bg-card border border-border shadow-lg h-full"
@@ -66,8 +64,8 @@ export const SlideCobranza = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
-                <Receipt className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 rounded-xl bg-gray-500/20 flex items-center justify-center">
+                <Receipt className="w-6 h-6 text-gray-600" />
               </div>
               <h3 className="text-xl font-bold">Cobranza</h3>
             </motion.div>
@@ -81,7 +79,7 @@ export const SlideCobranza = () => {
               ].map((item) => (
                 <StaggerItem key={item.label}>
                   <motion.div
-                    className="p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg"
+                    className="p-3 bg-gray-50 dark:bg-gray-950/30 rounded-lg"
                     whileHover={{ x: 4 }}
                   >
                     <span className="font-medium text-sm">{item.label}</span>
@@ -94,16 +92,15 @@ export const SlideCobranza = () => {
         </SubZoomContainer>
       </div>
 
-      {/* Bottom section - Cartera */}
       <SubZoomContainer delay={1.0} direction="bottom" className="mt-8">
         <div className="p-6 rounded-2xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 border border-primary/20">
           <h3 className="font-bold text-lg mb-4 text-center">Control de Cartera</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { icon: AlertCircle, label: "Avisos de Mora", color: "text-orange-500" },
-              { icon: BarChart3, label: "Cartera Vencida", color: "text-amber-500" },
-              { icon: FileCheck, label: "Estados de Cuenta", color: "text-blue-500" },
-              { icon: CreditCard, label: "Cierre Diario", color: "text-emerald-500" },
+              { icon: BarChart3, label: "Cartera Vencida", color: "text-orange-600" },
+              { icon: FileCheck, label: "Estados de Cuenta", color: "text-gray-500" },
+              { icon: CreditCard, label: "Cierre Diario", color: "text-gray-600" },
             ].map((item, index) => (
               <motion.div
                 key={item.label}

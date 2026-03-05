@@ -54,7 +54,7 @@ export const SlideIntro = () => {
       {/* Title */}
       <SubZoomContainer delay={0.1} direction="zoom">
         <div className="flex items-center justify-center gap-4 mb-2">
-          <div className="inline-flex items-center justify-center h-14 rounded-xl bg-primary shadow-lg px-2 py-1">
+          <div className="inline-flex items-center justify-center h-20 rounded-xl bg-primary shadow-lg px-3 py-1.5">
             <img src={logoSysde} alt="Sysde" className="h-full w-auto object-contain" />
           </div>
           <span className="text-muted-foreground text-lg font-light">×</span>

@@ -33,11 +33,11 @@ const topProcesses = [
   {
     id: "cobranza",
     icon: Receipt,
-    iconBg: "bg-red-100 dark:bg-red-900/30",
-    iconColor: "text-red-600 dark:text-red-400",
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
     title: "Cobranza",
     description: "Workflow No-Code personalizable",
-    buttonColor: "bg-gradient-to-r from-red-500 to-red-600",
+    buttonColor: "bg-gradient-to-r from-orange-500 to-amber-500",
     itemCount: 7,
     tag: "No-Code",
     tags: [
@@ -98,7 +98,7 @@ const topProcesses = [
 
 const legendItems = [
   { color: "bg-blue-500", label: "Activos" },
-  { color: "bg-red-500", label: "Cobranza" },
+  { color: "bg-orange-500", label: "Cobranza" },
   { color: "bg-emerald-500", label: "Seguros" },
   { color: "bg-violet-500", label: "Compra" },
   { color: "bg-amber-500", label: "Reestructuras" },
@@ -365,7 +365,7 @@ const CobranzaView = () => {
     <motion.div className="space-y-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
       <div className="p-6 rounded-2xl bg-card border border-border shadow-sm">
         <div className="flex items-center gap-2 mb-4">
-          <Receipt className="w-5 h-5 text-red-500" />
+          <Receipt className="w-5 h-5 text-orange-500" />
           <span className="text-sm font-bold text-foreground">Flujo de Cobranza</span>
           <motion.span className="ml-auto px-2.5 py-0.5 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white text-[10px] font-bold rounded-full" animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 2, repeat: Infinity }}>NO-CODE</motion.span>
         </div>
@@ -377,7 +377,7 @@ const CobranzaView = () => {
                   <div className="flex gap-0.5"><div className="w-1 h-1 rounded-full bg-foreground" /><div className="w-1 h-1 rounded-full bg-foreground" /></div>
                   <div className="flex gap-0.5"><div className="w-1 h-1 rounded-full bg-foreground" /><div className="w-1 h-1 rounded-full bg-foreground" /></div>
                 </div>
-                <div className="w-7 h-7 rounded-lg bg-red-500/10 flex items-center justify-center"><step.icon className="w-3.5 h-3.5 text-red-600" /></div>
+                <div className="w-7 h-7 rounded-lg bg-orange-500/10 flex items-center justify-center"><step.icon className="w-3.5 h-3.5 text-orange-600" /></div>
                 <span className="text-xs font-semibold text-foreground">{step.label}</span>
                 <Pencil className="w-3 h-3 text-muted-foreground ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
@@ -387,9 +387,9 @@ const CobranzaView = () => {
         </StaggerContainer>
       </div>
       <SubZoomContainer delay={0.9} direction="bottom">
-        <div className="p-5 rounded-2xl bg-red-500/5 border border-red-300/30">
+        <div className="p-5 rounded-2xl bg-orange-500/5 border border-orange-300/30">
           <div className="flex items-center gap-2 mb-3">
-            <Settings2 className="w-4 h-4 text-red-500" />
+            <Settings2 className="w-4 h-4 text-orange-500" />
             <span className="text-sm font-bold text-foreground">100% Personalizable</span>
           </div>
           <div className="grid grid-cols-3 gap-3">
@@ -405,8 +405,8 @@ const CobranzaView = () => {
               </motion.div>
             ))}
           </div>
-          <motion.div className="mt-3 px-4 py-2 rounded-lg bg-red-500/10 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
-            <span className="text-red-600 text-xs font-bold">Sin código</span>
+          <motion.div className="mt-3 px-4 py-2 rounded-lg bg-orange-500/10 text-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
+            <span className="text-orange-600 text-xs font-bold">Sin código</span>
             <span className="text-xs text-muted-foreground"> — Diseña el workflow de cobranza perfecto para tu operación</span>
           </motion.div>
         </div>
@@ -516,7 +516,7 @@ const ReestructurasView = () => (
     <SubZoomContainer delay={0.3} direction="left">
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
         {[
-          { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-red-500/20", textColor: "text-red-600" },
+          { icon: AlertTriangle, label: "Atrasos en pagos", color: "bg-orange-500/20", textColor: "text-orange-600" },
           { icon: Calculator, label: "Proyección deuda", color: "bg-amber-500/20", textColor: "text-amber-600" },
           { icon: FileSignature, label: "Nueva línea", color: "bg-blue-500/20", textColor: "text-blue-600" },
           { icon: RefreshCw, label: "Nuevo ciclo", color: "bg-emerald-500/20", textColor: "text-emerald-600" },

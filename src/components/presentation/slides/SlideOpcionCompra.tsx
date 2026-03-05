@@ -33,7 +33,7 @@ export const SlideOpcionCompra = () => {
               >
                 <motion.div
                   className="p-6 rounded-2xl bg-card border border-border shadow-md text-center h-full"
-                  whileHover={{ y: -4, borderColor: "hsl(358, 78%, 45%)" }}
+                  whileHover={{ y: -4, borderColor: "hsl(30, 91%, 54%)" }}
                 >
                   <motion.div
                     className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4"

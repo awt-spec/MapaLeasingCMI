@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import logoSysde from "@/assets/logo_sysde.png";
 import logoCmi from "@/assets/logo_cmi_new.png";
 import {
-  Play, HelpCircle, Scale, GitBranch, Layers, LayoutGrid,
+  Play, HelpCircle, Scale, Layers, LayoutGrid,
   Settings, BarChart3, Flag
 } from "lucide-react";
 import { SubZoomContainer } from "../SubZoomContainer";
@@ -10,22 +10,20 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const nodeConfig = [
   { id: 1, labelKey: "node.inicio", icon: Play, x: 300, y: 40, color: "#f97316" },
-  { id: 2, labelKey: "node.flujo", icon: HelpCircle, x: 100, y: 120, color: "#6b7280" },
-  { id: 3, labelKey: "node.reglas", icon: Scale, x: 500, y: 120, color: "#f97316" },
-  { id: 4, labelKey: "node.riesgos", icon: GitBranch, x: 300, y: 200, color: "#6b7280" },
-  { id: 5, labelKey: "node.comerciales", icon: Settings, x: 100, y: 280, color: "#f97316" },
-  { id: 6, labelKey: "node.formalizacion", icon: Layers, x: 500, y: 280, color: "#6b7280" },
-  { id: 7, labelKey: "node.activos", icon: LayoutGrid, x: 300, y: 360, color: "#f97316" },
-  { id: 8, labelKey: "node.reportes", icon: BarChart3, x: 100, y: 440, color: "#6b7280" },
-  { id: 9, labelKey: "node.cierre", icon: Flag, x: 500, y: 440, color: "#f97316" },
+  { id: 2, labelKey: "node.flujo", icon: HelpCircle, x: 100, y: 140, color: "#6b7280" },
+  { id: 3, labelKey: "node.reglas", icon: Scale, x: 500, y: 140, color: "#f97316" },
+  { id: 4, labelKey: "node.comerciales", icon: Settings, x: 100, y: 240, color: "#f97316" },
+  { id: 5, labelKey: "node.formalizacion", icon: Layers, x: 500, y: 240, color: "#6b7280" },
+  { id: 6, labelKey: "node.activos", icon: LayoutGrid, x: 300, y: 340, color: "#f97316" },
+  { id: 7, labelKey: "node.reportes", icon: BarChart3, x: 100, y: 440, color: "#6b7280" },
+  { id: 8, labelKey: "node.cierre", icon: Flag, x: 500, y: 440, color: "#f97316" },
 ];
 
 const connections: [number, number][] = [
   [0, 1], [0, 2],
-  [1, 3], [2, 3],
-  [3, 4], [3, 5],
-  [4, 6], [5, 6],
-  [6, 7], [6, 8],
+  [1, 3], [2, 4],
+  [3, 5], [4, 5],
+  [5, 6], [5, 7],
 ];
 
 const W = 600;

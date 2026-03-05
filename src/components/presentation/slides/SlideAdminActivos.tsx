@@ -78,22 +78,6 @@ const topProcesses = [
       { icon: CheckCircle2, label: "Transferir" },
     ],
   },
-  {
-    id: "reestructuras",
-    icon: RefreshCw,
-    iconBg: "bg-orange-100 dark:bg-orange-900/30",
-    iconColor: "text-orange-600 dark:text-orange-400",
-    title: "Reestructuras",
-    description: "Ejecución y renegociación",
-    buttonColor: "bg-gradient-to-r from-orange-500 to-orange-600",
-    itemCount: 4,
-    tag: "Proceso",
-    tags: [
-      { icon: AlertTriangle, label: "Atrasos" },
-      { icon: Calculator, label: "Proyección" },
-      { icon: FileSignature, label: "Nueva línea" },
-    ],
-  },
 ];
 
 const legendItems = [
@@ -101,7 +85,6 @@ const legendItems = [
   { color: "bg-orange-500", label: "Cobranza" },
   { color: "bg-gray-500", label: "Seguros" },
   { color: "bg-orange-400", label: "Compra" },
-  { color: "bg-orange-500", label: "Reestructuras" },
 ];
 
 // ==================== ACTIVOS: Sub-navigation ====================
@@ -574,7 +557,7 @@ export const SlideAdminActivos = () => {
             <SubZoomContainer delay={0.1} direction="zoom" className="text-center mb-8">
               <div className="flex items-center justify-center gap-3 mb-2">
                 <Package className="w-10 h-10 text-primary" />
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground">Administración de Activos</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Administración de Cartera de Arrendamiento</h2>
               </div>
               <p className="text-lg text-muted-foreground">Selecciona un proceso para ver su diagrama</p>
             </SubZoomContainer>
@@ -614,7 +597,7 @@ export const SlideAdminActivos = () => {
                 {selectedProcess === "cobranza" && <CobranzaView />}
                 {selectedProcess === "seguros" && <SegurosView />}
                 {selectedProcess === "compra" && <CompraView />}
-                {selectedProcess === "reestructuras" && <ReestructurasView />}
+                
               </>
             )}
           </motion.div>
